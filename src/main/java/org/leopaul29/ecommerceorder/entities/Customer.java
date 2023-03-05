@@ -1,22 +1,27 @@
 package org.leopaul29.ecommerceorder.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
+@EqualsAndHashCode
 @Builder
 @Entity
-@Table(name = "Customer")
-public class Customer {
+@Table(name = "customers")
+public class Customer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "name", nullable = false)
     private String name;
+
+    public Customer(String name) {
+        this.name = name;
+    }
 }

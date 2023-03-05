@@ -1,7 +1,9 @@
 package org.leopaul29.ecommerceorder.repositories;
 
 import org.leopaul29.ecommerceorder.entities.Cart;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface CartRepository extends CrudRepository<Cart, Long> {
+@Repository
+public interface CartRepository extends JpaRepository<Cart, Long> {
 }

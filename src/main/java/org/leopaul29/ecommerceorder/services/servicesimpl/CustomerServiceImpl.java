@@ -1,6 +1,5 @@
 package org.leopaul29.ecommerceorder.services.servicesimpl;
 
-import lombok.AllArgsConstructor;
 import org.leopaul29.ecommerceorder.entities.Customer;
 import org.leopaul29.ecommerceorder.repositories.CustomerRepository;
 import org.leopaul29.ecommerceorder.services.CustomerService;
@@ -11,7 +10,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerRepository repository;
